@@ -1,5 +1,6 @@
 package com.example.itvdn.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
@@ -12,6 +13,7 @@ public class UserDto {
     private String email;
 
 
-    public UserDto(int id, String name) {
+    public UserDto(@NotNull String id, String name, String surname, String login, String password, String email) {
+
     }
 }

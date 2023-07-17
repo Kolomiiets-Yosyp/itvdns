@@ -17,9 +17,9 @@ public class ValidationController {
     }
 
     @GetMapping(path = "/getUser")
-    public UserDto getUserByID(@RequestParam("id")int id, String name){
+    public UserDto getUserByID(@RequestParam("id")int id){
 
-    return  usersStorage.getUserByID(id, name);
+    return  usersStorage.getUserByID(id);
     }
 
     @PutMapping(path = "/user")

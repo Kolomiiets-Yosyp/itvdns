@@ -12,13 +12,16 @@ public class UsersStorage {
     public void putUser(PutUserRequest putUserRequest){
 
         int id = users.size()+1;
-         users.add(new UserDto(id,
-             putUserRequest.getName()
-         ));
+         users.add(new UserDto( putUserRequest.getName(),
+                 putUserRequest.getSurname(),
+                 putUserRequest.getEmail(),
+                 putUserRequest.getLogin()
+                 ,putUserRequest.getPassword(),
+        putUserRequest.getName()));
     }
-    public UserDto getUserByID(int id, String name){
-        UserDto userDto = new UserDto(id, name);
-        return userDto;
+    public UserDto getUserByID(int id){
+
+        return users.get(id);
     }
 
 }
