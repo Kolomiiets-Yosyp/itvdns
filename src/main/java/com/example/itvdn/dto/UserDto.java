@@ -12,6 +12,6 @@ public class UserDto {
     private String email;
 
 
-    public UserDto(int id, String name, String surname, String email, String login, String password) {
+    public UserDto(int id, String name) {
     }
 }

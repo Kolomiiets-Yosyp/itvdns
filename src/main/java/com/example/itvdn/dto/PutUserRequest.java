@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 public class PutUserRequest {
-    @Null
+    @NotNull
     private String name;
     @Null
     private String surname;

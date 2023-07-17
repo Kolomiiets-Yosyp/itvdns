@@ -16,12 +16,13 @@ public class ValidationController {
         this.usersStorage= usersStorage;
     }
 
-    @RequestMapping(path = "/getUser", method = RequestMethod.GET)
-    public UserDto getUserByID(@RequestParam(value = "id")int id){
+    @GetMapping(path = "/getUser")
+    public UserDto getUserByID(@RequestParam("id")int id, String name){
 
-    return  usersStorage.getUserByID(id);
+    return  usersStorage.getUserByID(id, name);
     }
-    @RequestMapping(path = "/user", method = RequestMethod.PUT)
+
+    @PutMapping(path = "/user")
     public ResponseEntity putUser(@Validated @RequestBody PutUserRequest putUserRequest){
         usersStorage.putUser(putUserRequest );
         return new ResponseEntity<>(HttpStatus.OK);
