@@ -13,7 +13,6 @@ public class UserDto {
     private String email;
 
 
-    public UserDto(@NotNull String id, String name, String surname, String login, String password, String email) {
-
+    public UserDto(String name, String surname, String email, String login, String password, String name1) {
     }
 }
